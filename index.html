@@ -42,6 +42,25 @@
       footer a:hover {
         color: #8cb3a3;
       }
+      .separator {
+      border-top: 2px solid #8cb3a3;
+      margin: 40px 0;
+      }
+     .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #8cb3a3;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -101,57 +120,111 @@
               <a href="https://unsplash.com" target="_blank">Photo from Unsplash</a>
             </figcaption>
           </figure>
+
+          <!-- Section Latest in Wellness -->
           <h3 class="mt-4">Latest in Wellness</h3>
           <p>
             Discover the latest trends in wellness, from meditation techniques
             to fitness tips that keep you grounded and healthy.
           </p>
+          <!-- Carousel Latest in Wellness -->
+          <div id="wellnessCarousel" class="carousel slide my-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="height: 500px;">
+                <img src="https://images.unsplash.com/photo-1729914280602-468005e8b771?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8UzRNS0xBc0JCNzR8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 rounded" alt="Meditation and Relaxation Image" style="height: 500px; object-fit: cover;" />
+              </div>
+              <div class="carousel-item" style="height: 500px;">
+                <img src="https://images.unsplash.com/photo-1728567471723-52a2c6e8605b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM5fFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D" class="d-block w-100 rounded" alt="Yoga Wellness Image" style="height: 500px; object-fit: cover;" />
+              </div>
+              <div class="carousel-item" style="height: 500px;">
+                <img src="https://plus.unsplash.com/premium_photo-1727943459119-c64fb73f1520?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ3fFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D" class="d-block w-100 rounded" alt="Healthy Food Image" style="height: 500px; object-fit: cover;" />
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#wellnessCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#wellnessCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <!-- Section Explore Fashion & Trends -->
           <h3 class="mt-4">Explore Fashion & Trends</h3>
           <p>
             Stay ahead in fashion with insights into what's trending,
             sustainable fashion tips, and more.
           </p>
-        </section>
-      </div>
-    </main>
-    <!-- Section Subscribe -->
-    <section id="subscribe-section" class="container my-5">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6 text-center">
-          <h2>Join Our Community</h2>
-          <h3 class="text-muted">Subscribe for the latest lifestyle updates</h3>
-          <form class="row g-3 mt-4" onsubmit="event.preventDefault(); validateForm();">
-            <div class="col-12">
-              <input
-                type="text"
-                id="firstname"
-                name="firstname"
-                placeholder="First Name"
-                aria-label="First Name"
-                class="form-control"
-                required
-              />
+          <!-- Carousel Explore Fashion & Trends -->
+          <div id="fashionCarousel" class="carousel slide my-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="height: 500px;">
+                <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d" class="d-block w-100 rounded" alt="Fashion Style Image" style="height: 500px; object-fit: cover;" />
+              </div>
+              <div class="carousel-item" style="height: 500px;">
+                <img src="https://images.unsplash.com/photo-1726856667612-5252bd459a69?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDYxfFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D" class="d-block w-100 rounded" alt="Trendy Outfit Image" style="height: 500px; object-fit: cover;" />
+              </div>
+              <div class="carousel-item" style="height: 500px;">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" class="d-block w-100 rounded" alt="Sustainable Fashion Image" style="height: 500px; object-fit: cover;" />
+              </div>
             </div>
-            <div class="col-12">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                aria-label="Email"
-                class="form-control"
-                required
-              />
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-subscribe w-100">
-                Subscribe
-              </button>
-            </div>
-          </form>
+            <button class="carousel-control-prev" type="button" data-bs-target="#fashionCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#fashionCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <!-- Subscription Section -->
+      <div class="separator"></div>
+
+      <!-- Subscription Section -->
+      <section id="subscribe-section" class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6 text-center">
+            <h2>Join Our Community</h2>
+            <h3 class="text-muted">Subscribe for the latest lifestyle updates</h3>
+            <form class="row g-3 mt-4" onsubmit="return validateForm();">
+              <div class="col-12">
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="First Name"
+                  aria-label="First Name"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  aria-label="Email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-subscribe w-100">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Tombol Kembali ke Atas -->
+      <button class="scroll-top" onclick="window.scrollTo(0, 0);">↑</button>
+    </main>
+
     <!-- Footer -->
     <footer class="text-center py-4">
       <small>
@@ -161,15 +234,19 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script>
       function validateForm() {
-        const firstname = document.getElementById('firstname').value.trim();
-        const email = document.getElementById('email').value.trim();
-        
-        if (!firstname || !email) {
-          alert('Anda belum mengisi nama dan email. Silakan lengkapi kedua kolom tersebut.');
+        const firstname = document.getElementById('firstname').value;
+        const email = document.getElementById('email').value;
+
+        if (firstname === '' || email === '') {
+          alert('Please fill out both name and email before subscribing.');
+          return false; // Mencegah form dari pengiriman
         } else {
+          // Jika valid, alihkan ke halaman subscription_level.html
           window.location.href = 'subscription_level.html';
+          return false; // Mencegah form dari pengiriman yang sebenarnya
         }
       }
     </script>
